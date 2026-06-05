@@ -1,0 +1,15 @@
+"***This is a Function to Check Whether the Given list is Sorted or Not***"
+def IsItSorted(l):
+    is_sorted=True
+    next=l[0]
+    for i in l:
+        if i<next:
+            is_sorted=False
+            break
+        else:
+            next=i
+    return is_sorted
+
+nums=input("Enter values: ").split(",")
+nums=list(map(int,nums))
+print(IsItSorted(nums))
